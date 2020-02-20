@@ -14,9 +14,12 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Deploy') {
+        stage("publish to nexus") {
             steps {
-                echo 'Deploying...'
+                sh 'ls -la'
+                dir("pocs/calculator"){
+                    sh 'curl -v -u admin:admin --upload-file target/calculator-1.0-SNAPSHOT.jar http://localhost:8081/repository/iam-solution/calculator-1.0-SNAPSHOT.jar'
+                }
             }
         }
     }
