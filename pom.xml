@@ -23,4 +23,12 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <id>localnexus</id>
+      <url>http://localhost:8081/poc</url>
+    </repository>
+  </repositories>
+
 </project>
