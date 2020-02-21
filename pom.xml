@@ -27,7 +27,7 @@
   <repositories>
     <repository>
       <id>localnexus</id>
-      <url>http://localhost:8081/repository/poc</url>
+      <url>http://localhost:8081/repository/poc/</url>
     </repository>
   </repositories>
 
